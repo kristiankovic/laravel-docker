@@ -1,0 +1,1 @@
+#cd .. && chmod -R 777 practica1 practica2
