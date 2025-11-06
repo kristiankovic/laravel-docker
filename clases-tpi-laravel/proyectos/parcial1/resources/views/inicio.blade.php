@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <div class="flex flex-row justify-center flex-wrap gap-5 p-3 bg-">
+    <div class="flex flex-row justify-center flex-wrap gap-5 p-3">
 
         <x-card nombre="Lord Farckuad" img="img/img1.jpg">
         </x-card>

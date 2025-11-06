@@ -11,6 +11,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::controller(HomeController::class)->group(function() {
     
+    Route::get('/inicio', 'index')->name('inicio');
     Route::get('/principales','principales')->name('personajes_principales');
     Route::get('/villanos', 'villanos')->name('villanos');
     Route::get('/amigos','amigos')->name('amigos');
