@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>@yield('title', 'Mi app')</title>
+    @stack('css')
 </head>
 <body>
     <x-navbar>
         
     </x-navbar>
+
+    @yield('content')
 </body>
 </html>
