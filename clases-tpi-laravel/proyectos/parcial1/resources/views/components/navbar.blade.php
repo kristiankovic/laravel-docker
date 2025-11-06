@@ -1,19 +1,12 @@
-<div class="container mx-auto bg-amber-400 p-3">
+<div class="bg-blue-100 p-3">
 
-    <div class="flex justify-evenly align-middle">
+    <div class="flex justify-evenly">
 
-        <div class="border-2">
-            <input class="bg-white-400 p-3 w-100" type="text" placeholder="Villanos, amigos de Shreck, etc">
-        </div>
-
-        <div class="flex align-middle">
-            <select name="opciones" id="opciones">
-                <option value="personajes_principales">Personajes principales</option>
-                <option value="villanos">Villanos</option>
-                <option value="amigos_sherk">Amigos de Sherck</option>
-                <option value="personajes_secundarios">Personajes secundarios</option>
-            </select>
-        </div>
-
+        <ul class="flex flex-row gap-5">
+            <li><a class="p-1" href="principales"><strong>Personajes principales</strong></a></li>
+            <li><a class="p-1" href="villanos"><strong>Villanos</strong></a></li>
+            <li><a class="p-1" href="amigos"><strong>Amigos de Shrek</strong></a></li>
+            <li><a class="p-1" href="secundarios"><strong>Personajes secundarios</strong></a></li>
+        </ul>
     </div>
 </div>

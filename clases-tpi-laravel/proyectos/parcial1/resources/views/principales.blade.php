@@ -16,9 +16,6 @@
         <x-card nombre="Burro" img="img/img4.jpg">
         </x-card>
 
-        <x-card nombre="Lady" img="img/img2.jpg">
-        </x-card>
-
         <x-card nombre="Shrek" img="img/img3.jpg">
         </x-card> 
     </div>
