@@ -1,0 +1,19 @@
+comandos dentro del contenedor
+
+composer create-project laravel/laravel vv23011
+
+php artisan make:controller HomeController
+
+php artisan make:component layout-app
+
+php artisan make:model Departamento -mfs
+
+
+
+
+
+
+
+$table->foreignId("departamento_id")
+            ->constrained("Departamentos")
+            ->onDelete("restrict");
