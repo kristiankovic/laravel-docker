@@ -4,6 +4,7 @@ services:
     container_name: laravel_app
     ports:
       - "8080:80"
+      - "5173:5173"
     volumes:
       - ./proyectos:/var/www/html:delegated
     depends_on:

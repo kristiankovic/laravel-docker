@@ -16,5 +16,9 @@ RUN printf "<Directory /var/www/html>\nOptions Indexes FollowSymLinks\nAllowOver
     > /etc/apache2/conf-available/z-laravel.conf \
     && a2enconf z-laravel
 
+# Instalar Node.js y NPM (versión 20 en este ejemplo)
+RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
+
 WORKDIR /var/www/html
 EXPOSE 80
