@@ -11,7 +11,7 @@ Route::get('/user', function (Request $request) {
 
 /* php artisan route:list */
 
-Route::resource('tasks', TaskController::class)->only(['index', 'store', 'update', 'destroy']);
+//Route::resource('tasks', TaskController::class)->only(['index', 'store', 'update', 'destroy']);
 
 /*
 -----------------------

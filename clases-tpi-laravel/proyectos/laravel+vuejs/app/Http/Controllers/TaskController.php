@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class TaskController extends Controller
 {
@@ -14,7 +15,11 @@ class TaskController extends Controller
     {
         // traer todos los registros
         $tasks = Task::all();
-        return response()->json($tasks);
+        //return response()->json($tasks);
+
+        return Inertia::render('Tasks', [
+            'tasks' => $tasks
+        ]);
     }
 
     /**
@@ -32,7 +37,8 @@ class TaskController extends Controller
             'completed' => false
         ]);
 
-        return response()->json($task, 201); // se usa para cuando se ha creado un nuevo recurso
+        //return response()->json($task, 201); // se usa para cuando se ha creado un nuevo recurso
+        return redirect()->back();
     }
 
     /**
@@ -55,7 +61,8 @@ class TaskController extends Controller
         $task->completed = $validated['completed'];
         $task->save();
 
-        return response()->json($task, 200);
+        //return response()->json($task, 200);
+        return redirect()->back();
     }
 
     /**
@@ -64,6 +71,8 @@ class TaskController extends Controller
     public function destroy(Task $task)
     {
         $task->delete();
-        return response()->json(null, 204); // 204: No content -> para cuando la operacion fue exitosa pero no hay contenido para devolver
+        //return response()->json(null, 204); // 204: No content -> para cuando la operacion fue exitosa pero no hay contenido para devolver
+
+        return redirect()->back();
     }
 }

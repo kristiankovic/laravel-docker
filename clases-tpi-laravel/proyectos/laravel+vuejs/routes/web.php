@@ -4,19 +4,26 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\TaskController;
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-});
+});*/
+
+Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.index');
+Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
+Route::delete('/tasks/{task}', [TaskController::class, 'delete'])->name('tasks.delete');
+Route::put('/tasks/{task}', [TaskController::class, 'update'])->name('tasks.update');
 
 Route::get('/dashboard', function () {
+
     return Inertia::render('Dashboard', [
-        'horasAcumuladas' => 45
+        'horasAcumuladas' => 5
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
